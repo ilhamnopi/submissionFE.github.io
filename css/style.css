@@ -1,0 +1,184 @@
+@import url(darkMOde.css);
+@import url(buttonTogler.css);
+.container {
+  margin: 0px auto;
+  width: 90%;
+}
+* {
+  color: var(--main-text);
+}
+nav {
+  padding: 20px 0px;
+  background-color: var(--card);
+}
+.navigasi {
+  padding: 10px 0px;
+  display: flex;
+}
+.navigasi > * {
+  align-self: center;
+  color: var(--main-text);
+}
+.navigasi #darkMode {
+  margin-left: auto;
+}
+.m-auto {
+  margin: auto;
+}
+main {
+  padding-top: 60px;
+  background: var(--main-background) !important;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+.row {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.card {
+  background-color: var(--card);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02), 0px 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#formInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 0em;
+  overflow: hidden;
+  transition: height 200ms;
+}
+
+#formInput.active {
+  height: initial;
+}
+.acordion {
+  width: 50%;
+  margin-bottom: 30px;
+}
+#accordionBtn {
+  position: relative;
+  margin-left: auto;
+  display: block;
+  background-color: var(--btnPrimary);
+  color: #ffff;
+  border: none;
+  font-size: 1em;
+  width: 30px;
+  height: 30px;
+  border-radius: 41px;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+#accordionBtn.active {
+  transform: rotate(0deg);
+}
+.input-box {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+}
+label {
+  color: var(--main-text);
+}
+input {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: none;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--main-text);
+  border: 1px solid var(--main-text);
+}
+input:focus {
+  outline: none;
+  box-shadow: 1px 2px 2px var(--shadow);
+}
+
+button#submit {
+  color: #fff;
+  background-color: var(--btnPrimary);
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card-rak {
+  width: 50%;
+}
+.card-rak h2.text-heading {
+  margin-bottom: 30px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid var(--main-text);
+}
+.item > * {
+  align-self: center;
+}
+.inner {
+  margin-right: auto;
+}
+.inner h2 {
+  line-height: 1.6rem;
+  font-size: 20px;
+}
+.inner h3 {
+  line-height: 1.6rem;
+  font-size: 16px;
+}
+.inner h4 {
+  line-height: 1.6rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+button.aksi {
+  color: var(--btn-text);
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+button.add {
+  background-color: var(--btnPrimary);
+}
+
+button.undo {
+  background-color: var(--btnSecondary);
+  color: #191a19;
+}
+button.done {
+  background-color: #ff4040;
+}
+
+@media (max-width: 968px) {
+  .acordion {
+    width: 100%;
+  }
+  .card-rak {
+    width: 100%;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Book</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container navigasi">
+          <h1>Data Buku</h1>
+          <button id="darkMode" role="switch" onclick="toggleTheme()"></button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="card m-auto acordion">
+            <button id="accordionBtn">&uarr;</button>
+
+            <form action="#" id="formInput">
+              <!-- Input judul buku -->
+              <div class="input-box">
+                <label for="judulBuku">Nama Buku</label>
+                <input type="text" name="judul" id="judulBuku" />
+              </div>
+              <!-- Input  -->
+              <div class="input-box">
+                <label for="namaPengarang">Nama Pengarang</label>
+                <input type="text" name="pengarang" id="namaPengarang" />
+              </div>
+              <!-- Tahun Terbit  -->
+              <div class="input-box">
+                <label for="tahunTerbit">Tahun Terbit</label>
+                <input type="text" name="tahunTerbit" id="tahunTerbit" />
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" id="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- uncompleted -->
+          <div class="card m-auto card-rak">
+            <h2 class="text-heading">Belum Selesai dibaca</h2>
+            <!-- Uncompleted -->
+            <div class="list-item" id="uncompleteds"></div>
+          </div>
+          <!-- Completed -->
+          <div class="card m-auto card-rak">
+            <h2 class="text-heading">Selesai dibaca</h2>
+            <!-- Uncompleted -->
+            <div class="list-item" id="completeds"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="read.js"></script>
+  </body>
+</html>

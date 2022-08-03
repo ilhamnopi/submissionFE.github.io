@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s;
+}
+
+:root {
+  --card: #fff;
+  --main-background: #f6f6f6;
+  --main-nav-background: #ebebeb;
+  --main-text: #222831;
+  --btn-text: #f6f6f6;
+  --toggler-button-darkmode: #261c2c;
+  --toggler-border-button-darkmode: #191a19;
+  --toggler-inner-button-darkmode: linear-gradient(225deg, rgba(255, 248, 10, 1) 0%, rgba(246, 246, 246, 1) 100%);
+  --shadow: hsl(0deg 0% 0% / 0.47);
+  --btnPrimary: #1a2029;
+  --btnSecondary: rgb(255, 239, 21);
+  --content: url("../icon/sun.svg");
+}
+
+[data-theme="dark"] {
+  --card: #1a2029;
+  --main-text: #f6f6f6;
+  --btn-text: #f6f6f6;
+  --main-nav-background: #1a2029;
+  --main-background: linear-gradient(216deg, rgba(34, 40, 49, 1) 0%, rgba(35, 25, 85, 1) 100%);
+  --toggler-button-darkmode: #f6f6f6;
+  --toggler-border-button-darkmode: #fff;
+  --toggler-inner-button-darkmode: linear-gradient(284deg, rgba(34, 40, 49, 1) 0%, rgba(35, 25, 85, 1) 100%);
+  --transformDark: translateX(25px);
+  --shadow: rgba(255, 255, 255, 0.47);
+  --btnPrimary: #1424ff;
+  --content: url("../icon/moon.svg");
+}

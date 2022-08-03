@@ -1,0 +1,26 @@
+button#darkMode {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background-color: var(--toggler-border-button-darkmode);
+  cursor: pointer;
+  transition: border-color 200ms;
+  border: none;
+}
+
+button#darkMode::before {
+  /* content: var(--content); */
+  content: "";
+  display: inline-block;
+  border-radius: 40px;
+  background-color: var(--toggler-border-button-darkmode);
+  background-image: var(--content);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: 1px 6px;
+  height: 32px;
+  width: 32px;
+  transform: 200ms, background 200ms;
+}
