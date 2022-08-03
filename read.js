@@ -1,191 +1,211 @@
-const uncompleteds = [];
-const RENDER_EVENT = "render-book";
-const SAVED_EVENT = "saved-todo";
-const STORAGE_KEY = "TODO_APPS";
-
-function isStorageExist() {
-  if (typeof Storage === undefined) {
-    alert("Browser kamu tidak mendukung local storage");
-    return false;
-  }
-  return true;
+function _0x469a(_0x1c9dc6, _0x5c8831) {
+  const _0x406810 = _0x4068();
+  return (
+    (_0x469a = function (_0x469ae0, _0x27d0e6) {
+      _0x469ae0 = _0x469ae0 - 0x1c0;
+      let _0x493e95 = _0x406810[_0x469ae0];
+      return _0x493e95;
+    }),
+    _0x469a(_0x1c9dc6, _0x5c8831)
+  );
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  const submitForm = document.getElementById("formInput");
-
-  submitForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    addBook();
-  });
-
-  function addBook() {
-    const judul = document.getElementById("judulBuku").value;
-    const author = document.getElementById("namaPengarang").value;
-    const year = document.getElementById("tahunTerbit").value;
-
-    const generatedID = generatedId();
-    const bookObject = generateBookObject(generatedID, judul, author, year, false);
-    uncompleteds.push(bookObject);
-
-    document.dispatchEvent(new Event(RENDER_EVENT));
-    saveData();
+function _0x4068() {
+  const _0x4b4e5d = [
+    "render-book",
+    "add",
+    "inner",
+    "DOMContentLoaded",
+    "56306730QYnPNu",
+    "namaPengarang",
+    "parse",
+    "18yfvPtk",
+    "getElementById",
+    "div",
+    "1816iXyUvQ",
+    "innerHTML",
+    "undo",
+    "4oOEPLu",
+    "uncompleteds",
+    "34657wZijyZ",
+    "click",
+    "6387939YcweTO",
+    "splice",
+    "append",
+    "createElement",
+    "push",
+    "6920870VNccQK",
+    "judulBuku",
+    "submit",
+    "done",
+    "classList",
+    "item",
+    "1233648YdaBWd",
+    "innerText",
+    "setItem",
+    "aksi",
+    "isCompleted",
+    "stringify",
+    "book-",
+    "value",
+    "226917FDjvFo",
+    "dispatchEvent",
+    "addEventListener",
+    "getItem",
+    "7127688WPDZmi",
+  ];
+  _0x4068 = function () {
+    return _0x4b4e5d;
+  };
+  return _0x4068();
+}
+const _0x203c27 = _0x469a;
+(function (_0x1c54ac, _0x2283e4) {
+  const _0x272ea7 = _0x469a,
+    _0x2b2224 = _0x1c54ac();
+  while (!![]) {
+    try {
+      const _0x445f57 =
+        -parseInt(_0x272ea7(0x1d5)) / 0x1 +
+        (-parseInt(_0x272ea7(0x1c0)) / 0x2) * (parseInt(_0x272ea7(0x1dd)) / 0x3) +
+        (-parseInt(_0x272ea7(0x1c6)) / 0x4) * (parseInt(_0x272ea7(0x1cf)) / 0x5) +
+        -parseInt(_0x272ea7(0x1e1)) / 0x6 +
+        (-parseInt(_0x272ea7(0x1c8)) / 0x7) * (parseInt(_0x272ea7(0x1c3)) / 0x8) +
+        parseInt(_0x272ea7(0x1ca)) / 0x9 +
+        parseInt(_0x272ea7(0x1e6)) / 0xa;
+      if (_0x445f57 === _0x2283e4) break;
+      else _0x2b2224["push"](_0x2b2224["shift"]());
+    } catch (_0x330df5) {
+      _0x2b2224["push"](_0x2b2224["shift"]());
+    }
   }
-
-  function generatedId() {
+})(_0x4068, 0xb23be);
+const uncompleteds = [],
+  RENDER_EVENT = _0x203c27(0x1e2),
+  SAVED_EVENT = "saved-todo",
+  STORAGE_KEY = "TODO_APPS";
+function isStorageExist() {
+  if (typeof Storage === undefined) return alert("Browser\x20kamu\x20tidak\x20mendukung\x20local\x20storage"), ![];
+  return !![];
+}
+document[_0x203c27(0x1df)](_0x203c27(0x1e5), function () {
+  const _0x4174c5 = _0x203c27,
+    _0x41608c = document[_0x4174c5(0x1c1)]("formInput");
+  _0x41608c[_0x4174c5(0x1df)](_0x4174c5(0x1d1), function (_0x43ddd7) {
+    _0x43ddd7["preventDefault"](), _0x5b9857();
+  });
+  function _0x5b9857() {
+    const _0x314020 = _0x4174c5,
+      _0x53c46c = document[_0x314020(0x1c1)](_0x314020(0x1d0))[_0x314020(0x1dc)],
+      _0xb3fa4c = document[_0x314020(0x1c1)](_0x314020(0x1e7))[_0x314020(0x1dc)],
+      _0x30a8a4 = document["getElementById"]("tahunTerbit")[_0x314020(0x1dc)],
+      _0x48c40b = _0x1488d2(),
+      _0x51ff1b = _0x27ac48(_0x48c40b, _0x53c46c, _0xb3fa4c, _0x30a8a4, ![]);
+    uncompleteds[_0x314020(0x1ce)](_0x51ff1b), document[_0x314020(0x1de)](new Event(RENDER_EVENT)), _0x5558e6();
+  }
+  function _0x1488d2() {
     return +new Date();
   }
-
-  function generateBookObject(id, judul, author, year, isCompleted) {
-    return {
-      id,
-      judul,
-      author,
-      year,
-      isCompleted,
-    };
+  function _0x27ac48(_0xe465c7, _0x55127a, _0x2a23f5, _0x200e75, _0x527f02) {
+    return { id: _0xe465c7, judul: _0x55127a, author: _0x2a23f5, year: _0x200e75, isCompleted: _0x527f02 };
   }
-
-  function makeBookList(bookObject) {
-    const textJudul = document.createElement("h2");
-    textJudul.innerText = bookObject.judul;
-
-    const textAuthor = document.createElement("h3");
-    textAuthor.innerText = bookObject.author;
-
-    const textYear = document.createElement("h4");
-    textYear.innerText = bookObject.year;
-
-    const textContainer = document.createElement("div");
-    textContainer.classList.add("inner");
-    textContainer.append(textJudul, textAuthor, textYear);
-
-    const container = document.createElement("div");
-    container.classList.add("item");
-    container.append(textContainer);
-    container.setAttribute("id", `book-${bookObject.id}`);
-
-    if (bookObject.isCompleted) {
-      const undoButton = document.createElement("button");
-      undoButton.classList.add("aksi", "undo");
-      undoButton.innerText = "undo";
-
-      undoButton.addEventListener("click", function () {
-        undoBookFromCompleted(bookObject.id);
-      });
-
-      const trashButton = document.createElement("button");
-      trashButton.classList.add("aksi", "done");
-      trashButton.innerText = "hapus";
-
-      trashButton.addEventListener("click", function () {
-        removeBookFromCompleted(bookObject.id);
-      });
-
-      container.append(undoButton, trashButton);
+  function _0x42b77a(_0x14ace7) {
+    const _0x516e8e = _0x4174c5,
+      _0xa6bec6 = document[_0x516e8e(0x1cd)]("h2");
+    _0xa6bec6["innerText"] = _0x14ace7["judul"];
+    const _0x5c5649 = document["createElement"]("h3");
+    _0x5c5649[_0x516e8e(0x1d6)] = _0x14ace7["author"];
+    const _0x3609f7 = document[_0x516e8e(0x1cd)]("h4");
+    _0x3609f7[_0x516e8e(0x1d6)] = _0x14ace7["year"];
+    const _0x1e7272 = document[_0x516e8e(0x1cd)]("div");
+    _0x1e7272["classList"][_0x516e8e(0x1e3)](_0x516e8e(0x1e4)), _0x1e7272[_0x516e8e(0x1cc)](_0xa6bec6, _0x5c5649, _0x3609f7);
+    const _0x372d6d = document[_0x516e8e(0x1cd)](_0x516e8e(0x1c2));
+    _0x372d6d[_0x516e8e(0x1d3)][_0x516e8e(0x1e3)](_0x516e8e(0x1d4)), _0x372d6d["append"](_0x1e7272), _0x372d6d["setAttribute"]("id", _0x516e8e(0x1db) + _0x14ace7["id"]);
+    if (_0x14ace7[_0x516e8e(0x1d9)]) {
+      const _0x53918b = document[_0x516e8e(0x1cd)]("button");
+      _0x53918b[_0x516e8e(0x1d3)][_0x516e8e(0x1e3)]("aksi", _0x516e8e(0x1c5)),
+        (_0x53918b[_0x516e8e(0x1d6)] = _0x516e8e(0x1c5)),
+        _0x53918b["addEventListener"](_0x516e8e(0x1c9), function () {
+          _0xfd4285(_0x14ace7["id"]);
+        });
+      const _0x1fe056 = document[_0x516e8e(0x1cd)]("button");
+      _0x1fe056[_0x516e8e(0x1d3)]["add"](_0x516e8e(0x1d8), _0x516e8e(0x1d2)),
+        (_0x1fe056[_0x516e8e(0x1d6)] = "hapus"),
+        _0x1fe056[_0x516e8e(0x1df)](_0x516e8e(0x1c9), function () {
+          _0x40f23f(_0x14ace7["id"]);
+        }),
+        _0x372d6d[_0x516e8e(0x1cc)](_0x53918b, _0x1fe056);
     } else {
-      const checkButton = document.createElement("button");
-      checkButton.classList.add("aksi", "add");
-      checkButton.innerText = "selesai";
-      checkButton.addEventListener("click", function () {
-        addBookToCompleted(bookObject.id);
-      });
-      container.append(checkButton);
+      const _0x1d8569 = document["createElement"]("button");
+      _0x1d8569[_0x516e8e(0x1d3)][_0x516e8e(0x1e3)]("aksi", _0x516e8e(0x1e3)),
+        (_0x1d8569[_0x516e8e(0x1d6)] = "selesai"),
+        _0x1d8569[_0x516e8e(0x1df)](_0x516e8e(0x1c9), function () {
+          _0x1f40aa(_0x14ace7["id"]);
+        }),
+        _0x372d6d[_0x516e8e(0x1cc)](_0x1d8569);
     }
-
-    return container;
+    return _0x372d6d;
   }
-
-  function addBookToCompleted(bookId) {
-    const bookTarget = findBook(bookId);
-    if (bookTarget == null) return;
-    bookTarget.isCompleted = true;
-    document.dispatchEvent(new Event(RENDER_EVENT));
-    saveData();
+  function _0x1f40aa(_0x3f7921) {
+    const _0x5769bd = _0x4174c5,
+      _0x5b5bcb = _0x5da9c4(_0x3f7921);
+    if (_0x5b5bcb == null) return;
+    (_0x5b5bcb[_0x5769bd(0x1d9)] = !![]), document[_0x5769bd(0x1de)](new Event(RENDER_EVENT)), _0x5558e6();
   }
-
-  function removeBookFromCompleted(bookId) {
-    const bookTarget = findBookIndex(bookId);
-
-    if (bookTarget === -1) return;
-
-    uncompleteds.splice(bookTarget, 1);
-    document.dispatchEvent(new Event(RENDER_EVENT));
-    saveData();
+  function _0x40f23f(_0x25bac1) {
+    const _0xc80891 = _0x4174c5,
+      _0x785e1 = _0x42c7c4(_0x25bac1);
+    if (_0x785e1 === -0x1) return;
+    uncompleteds[_0xc80891(0x1cb)](_0x785e1, 0x1), document[_0xc80891(0x1de)](new Event(RENDER_EVENT)), _0x5558e6();
   }
-
-  function undoBookFromCompleted(bookId) {
-    const bookTarget = findBook(bookId);
-
-    if (bookTarget == null) return;
-
-    bookTarget.isCompleted = false;
-    document.dispatchEvent(new Event(RENDER_EVENT));
-    saveData();
+  function _0xfd4285(_0x358f41) {
+    const _0x237ddc = _0x4174c5,
+      _0x1f5555 = _0x5da9c4(_0x358f41);
+    if (_0x1f5555 == null) return;
+    (_0x1f5555[_0x237ddc(0x1d9)] = ![]), document["dispatchEvent"](new Event(RENDER_EVENT)), _0x5558e6();
   }
-
-  function findBook(bookId) {
-    for (const bookItem of uncompleteds) {
-      if (bookItem.id === bookId) {
-        return bookItem;
-      }
+  function _0x5da9c4(_0xabcd3b) {
+    for (const _0x142708 of uncompleteds) {
+      if (_0x142708["id"] === _0xabcd3b) return _0x142708;
     }
     return null;
   }
-
-  function findBookIndex(bookId) {
-    for (const index in uncompleteds) {
-      if (uncompleteds[index].id === bookId) {
-        return index;
-      }
+  function _0x42c7c4(_0xabf903) {
+    for (const _0x4f0f6c in uncompleteds) {
+      if (uncompleteds[_0x4f0f6c]["id"] === _0xabf903) return _0x4f0f6c;
     }
-    return -1;
+    return -0x1;
   }
-
-  document.addEventListener(RENDER_EVENT, function () {
-    // console.log(uncompleteds);
-    // uncompleted
-    const uncompletedBookList = document.getElementById("uncompleteds");
-    uncompletedBookList.innerHTML = "";
-
-    const completedBookList = document.getElementById("completeds");
-    completedBookList.innerHTML = "";
-
-    for (const bookItem of uncompleteds) {
-      const bookElement = makeBookList(bookItem);
-      if (!bookItem.isCompleted) {
-        uncompletedBookList.append(bookElement);
-      } else {
-        completedBookList.append(bookElement);
-      }
+  document[_0x4174c5(0x1df)](RENDER_EVENT, function () {
+    const _0x4df2d0 = _0x4174c5,
+      _0x4cadc1 = document[_0x4df2d0(0x1c1)](_0x4df2d0(0x1c7));
+    _0x4cadc1[_0x4df2d0(0x1c4)] = "";
+    const _0x3ab193 = document["getElementById"]("completeds");
+    _0x3ab193[_0x4df2d0(0x1c4)] = "";
+    for (const _0x770485 of uncompleteds) {
+      const _0x92e12a = _0x42b77a(_0x770485);
+      !_0x770485[_0x4df2d0(0x1d9)] ? _0x4cadc1[_0x4df2d0(0x1cc)](_0x92e12a) : _0x3ab193[_0x4df2d0(0x1cc)](_0x92e12a);
     }
   });
-
-  function saveData() {
+  function _0x5558e6() {
+    const _0xbbf534 = _0x4174c5;
     if (isStorageExist()) {
-      const parsed = JSON.stringify(uncompleteds);
-      localStorage.setItem(STORAGE_KEY, parsed);
-      document.dispatchEvent(new Event(SAVED_EVENT));
+      const _0x4d52bb = JSON[_0xbbf534(0x1da)](uncompleteds);
+      localStorage[_0xbbf534(0x1d7)](STORAGE_KEY, _0x4d52bb), document[_0xbbf534(0x1de)](new Event(SAVED_EVENT));
     }
   }
-
-  document.addEventListener(SAVED_EVENT, function () {
-    console.log(localStorage.getItem(STORAGE_KEY));
+  document[_0x4174c5(0x1df)](SAVED_EVENT, function () {
+    const _0x25f012 = _0x4174c5;
+    console["log"](localStorage[_0x25f012(0x1e0)](STORAGE_KEY));
   });
-
-  function loadDataFromStorage() {
-    const serializedData = localStorage.getItem(STORAGE_KEY);
-    let data = JSON.parse(serializedData);
-
-    if (data !== null) {
-      for (const book of data) {
-        uncompleteds.push(book);
+  function _0x2ede8f() {
+    const _0x55bf16 = _0x4174c5,
+      _0x23d3bd = localStorage[_0x55bf16(0x1e0)](STORAGE_KEY);
+    let _0x381390 = JSON[_0x55bf16(0x1e8)](_0x23d3bd);
+    if (_0x381390 !== null)
+      for (const _0x3a9203 of _0x381390) {
+        uncompleteds["push"](_0x3a9203);
       }
-    }
-    document.dispatchEvent(new Event(RENDER_EVENT));
+    document[_0x55bf16(0x1de)](new Event(RENDER_EVENT));
   }
-
-  if (isStorageExist()) {
-    loadDataFromStorage();
-  }
+  isStorageExist() && _0x2ede8f();
 });
